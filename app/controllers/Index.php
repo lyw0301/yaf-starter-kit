@@ -21,8 +21,7 @@ class IndexController extends BaseController
      */
     public function handle()
     {
-        $config = config('app');
 
-        return view('welcome', $config);
+        // return view('welcome', $config);
     }
 }

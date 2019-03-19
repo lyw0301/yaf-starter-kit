@@ -122,6 +122,20 @@ class Bootstrap extends YafBootstrap
     }
 
     /**
+     * 数据库配置.
+     *
+     * @param Dispatcher $dispatcher
+     */
+    public function _initDb(Dispatcher $dispatcher)
+    {
+        $config = $dispatcher->getApplication()->getConfig()->db;
+        $db = \App\Services\Db_Mysql::getInstance($config);
+
+        $this->register->set(\App\Services\Db_Mysql::class, $db);
+        $this->register->alias('services.db', $db);
+    }
+
+    /**
      * 获取环境.
      *
      * @return string

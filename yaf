@@ -15,6 +15,7 @@ use App\Commands;
 define('BASE_PATH', __DIR__);
 
 $application = new Application();
+$application->add(new Commands\DateCommand());
 $application->add(new Commands\HelloCommand());
 $application->add(new Commands\MakeTestCommand());
 $application->add(new Commands\MakeTraitTestCommand());
