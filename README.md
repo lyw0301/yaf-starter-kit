@@ -1,6 +1,6 @@
-<h1 align="center">Yaf starter</h1>
+<h1 align="center">Yaf starter kit</h1>
 
-<p align="center">The Yaf testable skeleton and composer supported.</p>
+<p align="center">The Yaf testable starter kit and composer supported.</p>
 
 # Requirement
 
@@ -39,8 +39,8 @@ $ composer create-project lyw0301/yaf-starter myapp -vvv
     ```
     server {
       listen 80;
-      server_name  myapp.com;
-      root   /path/to/myapp;
+      server_name  mongochina.com;
+      root   /path/to/mongochina;
       index  index.php index.html index.htm;
 
       if (!-e $request_filename) {
@@ -52,7 +52,7 @@ $ composer create-project lyw0301/yaf-starter myapp -vvv
     #### Lighttpd
 
     ```
-    $HTTP["host"] =~ "(www.)?myapp.com$" {
+    $HTTP["host"] =~ "(www.)?mongochina.com$" {
       url.rewrite = (
          "^/(.+)/?$"  => "/index.php/$1",
       )
@@ -74,6 +74,7 @@ $ composer create-project lyw0301/yaf-starter myapp -vvv
 ├── app
 │   ├── commands                # sora commands (namespace：\App\Commands)
 │   ├── controllers             # Yaf Controllers (namespace：\)
+│   ├── models                  # Yaf Models (namespace：\)
 │   ├── exceptions              # Exceptions (namespace：\App\Exceptions)
 │   ├── facades                 # Service Facades (namespace：\)
 │   ├── plugins                 # Yaf plugins (namespace：\)
@@ -105,8 +106,8 @@ $ composer create-project lyw0301/yaf-starter myapp -vvv
 ```shell
 $ ./sora make:controller Foo_Bar # or：foo_bar/FooBar/FooBarController
 #
-# /www/myapp/app/controllers/Foo/Bar.php Created!
-# /www/myapp/tests/controllers/Foo/BarTest.php Created!
+# /www/mongochina.com/app/controllers/Foo/Bar.php Created!
+# /www/mongochina.com/tests/controllers/Foo/BarTest.php Created!
 ```
 
 
@@ -116,7 +117,7 @@ Of course, you can also create tests independently：
 
 ```shell
 $ ./sora make:test Foo_Bar # Also supports multiple type controller names
-# /www/myapp/tests/controllers/Foo/BarTest.php Created!
+# /www/mongochina.com/tests/controllers/Foo/BarTest.php Created!
 ```
 
 
@@ -219,7 +220,7 @@ public function testHandle()
 {
     $input = [
         'uids' => '2193182644',
-        'screen_name' => '大鹏',
+        'screen_name' => 'MongoChina',
         'trim_status' => 0,
         'has_extend' => 1,
         'simplify' => 0,
