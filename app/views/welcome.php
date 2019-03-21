@@ -25,17 +25,17 @@
 <div class="flex-center position-ref full-height">
     <div class="top-right links">
         <a href="/">Home</a>
-        <a href="https://github.com/lyw0301/yaf-starter">GitHub</a>
+        <a href="https://github.com/lyw0301/yaf-starter-kit">GitHub</a>
     </div>
 
     <div class="content">
         <div class="title m-b-md"><?= $name; ?></div>
 
         <div class="links">
-            <a href="https://github.com/lyw0301/yaf-starter">Documentation</a>
+            <a href="https://github.com/lyw0301/yaf-starter-kit">Documentation</a>
             <a href="https://easywechat.com">EasyWeChat</a>
             <a href="https://github.com/laruence/yaf">Yaf</a>
-            <a href="https://github.com/lyw0301/yaf-starter">GitHub</a>
+            <a href="https://github.com/lyw0301/yaf-starter-kit">GitHub</a>
         </div>
     </div>
 </div>
