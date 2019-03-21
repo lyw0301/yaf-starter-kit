@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: reatang
- * Date: 18/4/10
- * Time: 下午11:29
- */
 
 namespace App\Services;
 

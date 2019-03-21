@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<EOF
-This file is part of the overtrue/yaf-skeleton.
+This file is part of the lyw0301/yaf-starter.
 
 (c) overtrue <i@overtrue.me>
 

@@ -1,4 +1,4 @@
-<h1 align="center">Yaf skeleton</h1>
+<h1 align="center">Yaf starter</h1>
 
 <p align="center">The Yaf testable skeleton and composer supported.</p>
 
@@ -20,7 +20,7 @@ yaf.use_spl_autoload=1
 2. Create project.
 
 ```shell
-$ composer create-project overtrue/yaf-skeleton myapp -vvv
+$ composer create-project lyw0301/yaf-starter myapp -vvv
 ```
 
 3. Web server rewrite rules:
@@ -157,7 +157,7 @@ for example:
     public function handle()
     {
         $data = [
-            'name' => 'overtrue',
+            'name' => 'lyw0301',
             'age' => 28,
         ];
 
@@ -219,7 +219,7 @@ public function testHandle()
 {
     $input = [
         'uids' => '2193182644',
-        'screen_name' => '安正超',
+        'screen_name' => '大鹏',
         'trim_status' => 0,
         'has_extend' => 1,
         'simplify' => 0,

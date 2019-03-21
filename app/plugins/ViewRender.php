@@ -1,23 +1,12 @@
 <?php
 
-/*
- * This file is part of the overtrue/yaf-skeleton.
- *
- * (c) overtrue <i@overtrue.me>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
 use League\Plates\Engine;
 use Yaf\Plugin_Abstract as YafPlugin;
 use Yaf\Request_Abstract as YafRequest;
 use Yaf\Response_Abstract as YafResponse;
 
 /**
- * Class ViewRenderPlugin.
- *
- * @author overtrue <i@overtrue.me>
+ * Class ViewRenderPlugin
  */
 class ViewRenderPlugin extends YafPlugin
 {

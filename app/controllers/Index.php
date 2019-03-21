@@ -2,9 +2,7 @@
 use \App\Models\DlbOrder;
 
 /**
- * class IndexController.
- *
- * @author overtrue <i@overtrue.me>
+ * Class IndexController
  */
 class IndexController extends BaseController
 {
@@ -13,6 +11,7 @@ class IndexController extends BaseController
      */
     public function handle()
     {
+        /*
         $data = DlbOrder::query()
             ->find(1)
             ->toArray();
@@ -28,5 +27,15 @@ class IndexController extends BaseController
         $model->saveOrFail();
 
         print_r($model);
+        */
+        $data = DlbOrder::query()
+            ->getConnection()
+            ->table('dalaba_order')
+            ->select(['id','order_id'])
+            ->where(['match_id'=>103677])
+            ->get()
+            ->toArray();
+
+        print_r($data);
     }
 }

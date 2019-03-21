@@ -3,8 +3,6 @@
 
 /**
  * yaf command line tool.
- *
- * @author overtrue <i@overtrue.me>
  */
 
 require __DIR__.'/vendor/autoload.php';
