@@ -1,13 +1,5 @@
 <?php
-
-/*
- * This file is part of the overtrue/yaf-skeleton.
- *
- * (c) overtrue <i@overtrue.me>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
+use \App\Models\DlbOrder;
 
 /**
  * class IndexController.
@@ -21,7 +13,20 @@ class IndexController extends BaseController
      */
     public function handle()
     {
+        $data = DlbOrder::query()
+            ->find(1)
+            ->toArray();
 
-        // return view('welcome', $config);
+        $data = DlbOrder::query()
+            ->where(['match_id'=>103681])
+            ->limit(2)
+            ->get()
+            ->toArray();
+
+        $model = DlbOrder::query()->find(1);
+        $model->msg = 'test';
+        $model->saveOrFail();
+
+        print_r($model);
     }
 }

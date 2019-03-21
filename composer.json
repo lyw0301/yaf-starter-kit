@@ -15,7 +15,8 @@
       "App\\Presenters\\": "app/presenters",
       "App\\Traits\\": "app/traits",
       "App\\Exceptions\\": "app/exceptions",
-      "App\\Support\\": "app/support"
+      "App\\Support\\": "app/support",
+      "App\\Models\\": "app/models"
     },
     "files": [
       "app/helpers.php",
@@ -35,7 +36,8 @@
     "monolog/monolog": "~1.0",
     "psr/container": "^1.0",
     "league/plates": "^3.3",
-    "illuminate/database": "^5.8"
+    "illuminate/database": "^5.8",
+    "illuminate/events": "^5.8"
   },
   "require-dev": {
     "mockery/mockery": "~1.0",

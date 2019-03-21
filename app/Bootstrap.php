@@ -12,6 +12,10 @@
 use Yaf\Bootstrap_Abstract as YafBootstrap;
 use Yaf\Dispatcher;
 use \App\Services\Register;
+use Illuminate\Events\Dispatcher as LDispatcher;
+use Illuminate\Container\Container as LContainer;
+use Illuminate\Database\Capsule\Manager as Capsule;
+
 
 /**
  * Class Bootstrap.
@@ -78,6 +82,7 @@ class Bootstrap extends YafBootstrap
      */
     public function _initConfig(Dispatcher $dispatcher)
     {
+        $this->config = \Yaf\Application::app()->getConfig();//把配置保存起来
         Config::createFromPath(ROOT_PATH.'/config');
     }
 
@@ -117,22 +122,22 @@ class Bootstrap extends YafBootstrap
         }
 
         $dispatcher->registerPlugin(new ViewRenderPlugin());
-//        $dispatcher->registerPlugin(new SamplePlugin);
-//        ...
     }
 
     /**
-     * 数据库配置.
+     * 初始化 Eloquent ORM
      *
      * @param Dispatcher $dispatcher
      */
-    public function _initDb(Dispatcher $dispatcher)
+    public function _initDefaultDbAdapter(Dispatcher $dispatcher)
     {
-        $config = $dispatcher->getApplication()->getConfig()->db;
-        $db = \App\Services\Db_Mysql::getInstance($config);
+        $capsule = new Capsule();
+        $capsule->addConnection($this->config->database->toArray());
+        $capsule->setEventDispatcher(new LDispatcher(new LContainer));
+        $capsule->setAsGlobal();
+        $capsule->bootEloquent();
 
-        $this->register->set(\App\Services\Db_Mysql::class, $db);
-        $this->register->alias('services.db', $db);
+        class_alias('\Illuminate\Database\Capsule\Manager', 'DB');
     }
 
     /**
