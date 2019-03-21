@@ -74,7 +74,7 @@ $ composer create-project lyw0301/yaf-starter myapp -vvv
 │   ├── sami.phar
 │   └── sami.php
 ├── app
-│   ├── commands                # sora commands (namespace：\App\Commands)
+│   ├── commands                # yaf commands (namespace：\App\Commands)
 │   ├── controllers             # Yaf Controllers (namespace：\)
 │   ├── models                  # Yaf Models (namespace：\)
 │   ├── exceptions              # Exceptions (namespace：\App\Exceptions)
@@ -90,7 +90,7 @@ $ composer create-project lyw0301/yaf-starter myapp -vvv
 │   ├── application.ini     # Yaf config file
 ├── public                  # web extrence
 │   └── index.php
-├── sora                    # The command line tool
+├── yaf                     # The command line tool
 ├── tests                   # Unit tests
 └── vendor                  #
 ├── phpunit.xml.dist        # PHPUnit config file
@@ -184,7 +184,7 @@ More usage please read the [Plates Docs](http://platesphp.com/v3/).
 The unit test for creating the controller can be done with the following command：
 
 ```shell
-$ ./sora make:test Foo_BarController
+$ ./yaf make:test Foo_BarController
 ```
 
 ## Write test cases
