@@ -2,6 +2,8 @@
 
 <p align="center">The Yaf testable starter kit and composer supported.</p>
 
+<p align="center">集成 illuminate/database, 极大的方便在 Yaf 中进行数据库操作。</p>
+
 # Requirement
 
 - PHP >= 7.0
@@ -104,7 +106,7 @@ $ composer create-project lyw0301/yaf-starter myapp -vvv
 
 
 ```shell
-$ ./sora make:controller Foo_Bar # or：foo_bar/FooBar/FooBarController
+$ ./yaf make:controller Foo_Bar # or：foo_bar/FooBar/FooBarController
 #
 # /www/mongochina.com/app/controllers/Foo/Bar.php Created!
 # /www/mongochina.com/tests/controllers/Foo/BarTest.php Created!
@@ -116,7 +118,7 @@ All controllers are created in the `app/controllers` directory，and test files 
 Of course, you can also create tests independently：
 
 ```shell
-$ ./sora make:test Foo_Bar # Also supports multiple type controller names
+$ ./yaf make:test Foo_Bar # Also supports multiple type controller names
 # /www/mongochina.com/tests/controllers/Foo/BarTest.php Created!
 ```
 
