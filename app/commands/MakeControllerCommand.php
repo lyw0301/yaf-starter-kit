@@ -19,7 +19,7 @@ class MakeControllerCommand extends Command
         ['name', InputArgument::OPTIONAL, '控制器类名：Users_UpdateController（可以省掉最后的Controller后缀）'],
     ];
     protected $options = [
-      ['no-test', false, InputOption::VALUE_NONE, '不生成测试文件'],
+      ['no-test', true, InputOption::VALUE_NONE, '不生成测试文件'],
     ];
 
     public function handle()
@@ -36,9 +36,11 @@ class MakeControllerCommand extends Command
 
         $this->renderAndSave('controller', $replacements, $file);
 
+        /*
         if (!$this->option('no-test')) {
             $this->call('make:test', ['controller' => $controller]);
         }
+        */
 
         exec('composer dump');
     }
